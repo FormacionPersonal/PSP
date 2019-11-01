@@ -1,3 +1,5 @@
 *.odp
 *.odt
-
+.xml
+**/.idea/
+target/
