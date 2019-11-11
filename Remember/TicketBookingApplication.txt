@@ -1,0 +1,33 @@
+﻿Ejercicio noviembre 2019
+
+Somos una empresa de gestión de viajes que tiene acuerdos con compañías de vuelos, de autobuses y de coches compartidos. Por cada vuelo podemos vender hasta 150 billetes, en cada autobús 55 y en los coches compartidos solo 3 billetes.
+
+Para el puente de diciembre, vamos a disponer para la venta de 1 avión completo, 3 autobuses y 200 coches compartidos.
+
+Realiza una aplicación llamada TiketBookingApplication que:
+Tenga dos argumentos de entrada distintos:
+El primero identificará el tipo de transporte, siendo la letra:
+A para solicitar la compra de billetes de avión
+B para solicitar al compra de billetes de autobús
+C para solicitar la compra de billetes de coche compartido.
+El segundo argumento indicará, en número, cuántos billetes quiere comprar.
+Si se puede satisfacer la petición se mostrará por pantalla un mensaje indicándolo. Si con la petición no se vendieran todos los billetes de ese medio de transporte, se indicarán los asientos libres también en el mensaje por pantalla.
+Si no se puede satisfacer la petición, se mostrará por un pantalla un mensaje indicándolo.
+Si no se puede satisfacer la petición para el medio de transporte indicado pero sí se pudiera completar con otro medio de transporte, se le indicará al usuario la alternativa con un mensaje en pantalla.
+Deberá controlar errores y valores de entrada inválidos.
+Intenta cuidar el código
+
+Ejemplos de funcionamiento
+
+Ejemplo 1
+Entrada:  TiketBookingApplication A 15
+Salida: “Su petición se ha completado con éxito. Aún quedan 135 billetes disponibles”
+Ejemplo 2
+Entrada: TiketBookingApplication B 165
+Salida: “Su petición se ha completado con éxito”
+Ejemplo 3
+Entrada: TiketBookingApplication C 700
+Salida: “Lo sentimos, su petición no puede completarse”
+Ejemplo 4:
+Entrada: TiketBookingApplication A 155
+Salida: “Lo sentimos, no disponemos de tantos billetes de avión. Como alternativa, tenemos billetes de autobús y de coche compartido”
