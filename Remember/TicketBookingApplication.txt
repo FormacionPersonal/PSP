@@ -4,7 +4,7 @@ Somos una empresa de gestión de viajes que tiene acuerdos con compañías de vu
 
 Para el puente de diciembre, vamos a disponer para la venta de 1 avión completo, 3 autobuses y 200 coches compartidos.
 
-Realiza una aplicación llamada TiketBookingApplication que:
+Realiza una aplicación llamada TicketBookingApplication que:
 * Tenga dos argumentos de entrada distintos:
    * El primero identificará el tipo de transporte, siendo la letra:
       * A para solicitar la compra de billetes de avión
