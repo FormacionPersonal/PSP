@@ -20,14 +20,14 @@ Realiza una aplicación llamada TicketBookingApplication que:
 Ejemplos de funcionamiento
 
 Ejemplo 1
-* Entrada:  TiketBookingApplication A 15
+* Entrada:  TicketBookingApplication A 15
 * Salida: “Su petición se ha completado con éxito. Aún quedan 135 billetes disponibles”
 Ejemplo 2
-* Entrada: TiketBookingApplication B 165
+* Entrada: TicketBookingApplication B 165
 * Salida: “Su petición se ha completado con éxito”
 Ejemplo 3
-* Entrada: TiketBookingApplication C 700
+* Entrada: TicketBookingApplication C 700
 * Salida: “Lo sentimos, su petición no puede completarse”
 Ejemplo 4:
-* Entrada: TiketBookingApplication A 155
+* Entrada: TicketBookingApplication A 155
 * Salida: “Lo sentimos, no disponemos de tantos billetes de avión. Como alternativa, tenemos billetes de autobús y de coche compartido”
