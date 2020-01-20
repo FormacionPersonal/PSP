@@ -14,7 +14,7 @@ public class ServerUdpApplication {
         DatagramSocket server = null;
         try {
 
-            server = new DatagramSocket(PORT);
+            server = new DatagramSocket();
             InetAddress address = InetAddress.getByName("localhost");
 
             while(true) {
