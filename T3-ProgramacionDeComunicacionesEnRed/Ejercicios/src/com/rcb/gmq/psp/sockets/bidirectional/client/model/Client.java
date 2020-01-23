@@ -19,11 +19,12 @@ public class Client {
 
     public void start() throws IOException {
 
-        Socket client = new Socket(hostname, port);
+        Socket client = null;
         try {
-
+            client = new Socket(hostname, port);
             BufferedReader in = new BufferedReader(
                 new InputStreamReader(client.getInputStream()));
+
             PrintWriter out = new PrintWriter(
                 client.getOutputStream(), true);
 
