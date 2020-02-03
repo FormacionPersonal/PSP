@@ -7,3 +7,5 @@ target/
 *.odt#
 .odt#
 *.iml
+*.odp#
+PractsEjercicios/**
