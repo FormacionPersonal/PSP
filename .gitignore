@@ -9,3 +9,5 @@ target/
 *.iml
 *.odp#
 PractsEjercicios/**
+T4-GeneracionServiciosEnRed/Servers/**
+T4-GeneracionServiciosEnRed/SOAP/**
