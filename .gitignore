@@ -11,3 +11,9 @@ target/
 PractsEjercicios/**
 T4-GeneracionServiciosEnRed/Servers/**
 T4-GeneracionServiciosEnRed/SOAP/**
+T4-GeneracionServiciosEnRed/WS/**
+T4-GeneracionServiciosEnRed/Ejercicios/Servers/**
+T4-GeneracionServiciosEnRed/Ejercicios/.metadata/
+**/.classpath
+**/.project
+**/.settings/
