@@ -2,50 +2,67 @@
 <wsdl:definitions name="helloWorldPSP" targetNamespace="http://www.example.org/helloWorldPSP/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.example.org/helloWorldPSP/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://www.example.org/helloWorldPSP/">
-                  
-      
+      			
       <xsd:element name="hello">
-                        
-        
+        				
         <xsd:complexType>
-                              
-          
+          					
           <xsd:sequence>
-                                    
-            
+            						
             <xsd:element name="name" type="xsd:string"/>
-                                  
-          
+            					
           </xsd:sequence>
-                            
-        
+          				
         </xsd:complexType>
-                      
-      
+        			
       </xsd:element>
-                  
-      
+      			
       <xsd:element name="helloResponse">
-                        
-        
+        				
         <xsd:complexType>
-                              
-          
+          					
           <xsd:sequence>
-                                    
-            
+            						
             <xsd:element name="greet" type="xsd:string"/>
-                                  
-          
+            					
           </xsd:sequence>
-                            
-        
+          				
         </xsd:complexType>
-                      
-      
+        			
       </xsd:element>
-                
-    
+      			
+
+			
+      <xsd:element name="goodbye">
+        				
+        <xsd:complexType>
+          					
+          <xsd:sequence>
+            						
+            <xsd:element name="name" type="xsd:string"/>
+            						
+            <xsd:element name="procedence" type="xsd:string"/>
+            					
+          </xsd:sequence>
+          				
+        </xsd:complexType>
+        			
+      </xsd:element>
+      			
+      <xsd:element name="goodbyeResponse">
+        				
+        <xsd:complexType>
+          					
+          <xsd:sequence>
+            						
+            <xsd:element name="greet" type="xsd:string"/>
+            					
+          </xsd:sequence>
+          				
+        </xsd:complexType>
+        			
+      </xsd:element>
+      		
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="helloRequest">
@@ -56,11 +73,25 @@
     <wsdl:part name="parameters" element="tns:helloResponse">
     </wsdl:part>
   </wsdl:message>
+  <wsdl:message name="goodbyeRequest">
+    <wsdl:part name="parameters" element="tns:goodbye">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="goodbyeResponse">
+    <wsdl:part name="parameters" element="tns:goodbyeResponse">
+    </wsdl:part>
+  </wsdl:message>
   <wsdl:portType name="helloWorldPSP">
     <wsdl:operation name="hello">
       <wsdl:input message="tns:helloRequest">
     </wsdl:input>
       <wsdl:output message="tns:helloResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goodbye">
+      <wsdl:input message="tns:goodbyeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:goodbyeResponse">
     </wsdl:output>
     </wsdl:operation>
   </wsdl:portType>
@@ -75,10 +106,19 @@
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="goodbye">
+      <soap:operation soapAction="http://www.example.org/helloWorldPSP/goodbye"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="helloWorldPSP">
     <wsdl:port name="helloWorldPSPSOAP" binding="tns:helloWorldPSPSOAP">
-      <soap:address location="http://localhost:8080/helloWorldPSP/services/helloWorldPSPSOAP"/>
+      <soap:address location="http://localhost:8080/helloWorldPSP/services"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

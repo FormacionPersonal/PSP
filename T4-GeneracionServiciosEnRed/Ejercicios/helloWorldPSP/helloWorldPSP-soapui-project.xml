@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ba24db7d-31dc-4c6f-97ca-a4110c3c06ca" activeEnvironment="Default" name="helloWorldPSP" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b5eb513d-1c25-4680-922e-2d01416bed02" wsaVersion="NONE" name="helloWorldPSPSOAP" type="wsdl" bindingName="{http://www.example.org/helloWorldPSP/}helloWorldPSPSOAP" soapVersion="1_1" anonymous="optional" definition="file:/Users/Raul.Camarero/Documents/PSP/T4-GeneracionServiciosEnRed/Ejercicios/helloWorldPSP/helloWorldPSP.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/Raul.Camarero/Documents/PSP/T4-GeneracionServiciosEnRed/Ejercicios/helloWorldPSP/helloWorldPSP.wsdl"><con:part><con:url>file:/Users/Raul.Camarero/Documents/PSP/T4-GeneracionServiciosEnRed/Ejercicios/helloWorldPSP/helloWorldPSP.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="helloWorldPSP" targetNamespace="http://www.example.org/helloWorldPSP/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.example.org/helloWorldPSP/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.org/helloWorldPSP/">
+      <xsd:element name="hello">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="helloResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="greet" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="goodbye">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="procedence" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="goodbyeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="greet" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="helloRequest">
+    <wsdl:part name="parameters" element="tns:hello"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="helloResponse">
+    <wsdl:part name="parameters" element="tns:helloResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="goodbyeRequest">
+    <wsdl:part name="parameters" element="tns:goodbye"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="goodbyeResponse">
+    <wsdl:part name="parameters" element="tns:goodbyeResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="helloWorldPSP">
+    <wsdl:operation name="hello">
+      <wsdl:input message="tns:helloRequest"></wsdl:input>
+      <wsdl:output message="tns:helloResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goodbye">
+      <wsdl:input message="tns:goodbyeRequest"/>
+      <wsdl:output message="tns:goodbyeResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="helloWorldPSPSOAP" type="tns:helloWorldPSP">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hello">
+      <soap:operation soapAction="http://www.example.org/helloWorldPSP/hello"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goodbye">
+      <soap:operation soapAction="http://www.example.org/helloWorldPSP/goodbye"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="helloWorldPSP">
+    <wsdl:port name="helloWorldPSPSOAP" binding="tns:helloWorldPSPSOAP">
+      <soap:address location="http://localhost:8080/helloWorldPSP/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/helloWorldPSP/services</con:endpoint></con:endpoints><con:operation id="79b22024-c9c7-4ed8-8e7f-b88671a71647" isOneWay="false" action="http://www.example.org/helloWorldPSP/goodbye" name="goodbye" bindingOperationName="goodbye" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f6cca7ad-1ba3-44f7-a6d2-4847c55c237d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/helloWorldPSP/services/helloWorldPSPSOAP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://www.example.org/helloWorldPSP/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <hel:goodbye>
+         <name>Paul</name>
+         <procedence>NY</procedence>
+      </hel:goodbye>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.org/helloWorldPSP/goodbye"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0eddda66-1295-4747-8693-ab71bf4b7708" isOneWay="false" action="http://www.example.org/helloWorldPSP/hello" name="hello" bindingOperationName="hello" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e670e366-b5b3-4903-925f-36ad921ca159" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/helloWorldPSP/services</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://www.example.org/helloWorldPSP/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <hel:hello>
+         <name>Jhon</name>
+      </hel:hello>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.org/helloWorldPSP/hello"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -45,4 +45,20 @@ public class ObjectFactory {
         return new HelloResponse();
     }
 
+    /**
+     * Create an instance of {@link Goodbye }
+     * 
+     */
+    public Goodbye createGoodbye() {
+        return new Goodbye();
+    }
+
+    /**
+     * Create an instance of {@link GoodbyeResponse }
+     * 
+     */
+    public GoodbyeResponse createGoodbyeResponse() {
+        return new GoodbyeResponse();
+    }
+
 }
